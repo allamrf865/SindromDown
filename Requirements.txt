@@ -1,6 +1,7 @@
 streamlit
 plotly
 plotly-express
+matplotlib
 pandas
 numpy
 kaleido
