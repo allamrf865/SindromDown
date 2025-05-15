@@ -1,5 +1,13 @@
 import streamlit as st
-import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+import io
+import base64
+def plot_to_base64(fig):
+    """Konversi plot matplotlib ke base64"""
+    buf = io.BytesIO()
+    fig.savefig(buf, format='png')
+    buf.seek(0)
+    return base64.b64encode(buf.getvalue()).decode('utf-8')
 import plotly.express as px
 import numpy as np
 import pandas as pd
